@@ -1,9 +1,11 @@
 ---
 layout: default
 ---
-
+<header id="post-header">
+    <h1 id="post-title">{{site.data.tags[tag]}}</h1>
+</header>
 <div>
-    {% for post in site.posts %}
+    {% for post in site.tags[page.tag] %}
     <div class="blog-short">
         <h3><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h3>
 

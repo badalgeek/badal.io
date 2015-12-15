@@ -1,0 +1,152 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     10px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+.block-update-card {
+  height: 100%;
+  border: 1px #FFFFFF solid;
+  margin-left: 0px;
+  margin-top: 0;
+  padding: 0;
+  box-shadow: 1px 1px 8px #d8d8d8;
+  background-color: #FFFFFF;
+}
+.block-update-card .v-status {
+  width: 5px;
+  height: 50px;
+  float: left;
+  margin-right: 5px;
+  background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+}
+.block-update-card .update-card-MDimentions {
+  width: 80px;
+  height: 80px;
+}
+.block-update-card .update-card-body {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.block-update-card .profile-name {
+  padding-top: 10px;
+}
+.block-update-card .update-card-body h4 {
+  color: #737373;
+  font-weight: bold;
+  font-size: 13px;
+}
+.block-update-card .update-card-body p {
+  color: #737373;
+  font-size: 12px;
+}
+
+/*
+Creating a block for social media buttons
+*/
+.card-body-social {
+  font-size: 30px;
+  margin-top: 10px;
+}
+.card-body-social a:hover {
+  text-decoration: none;
+}
+.card-body-social .git {
+  color: black;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.card-body-social .twitter {
+  color: #19C4FF;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.card-body-social .google-plus {
+  color: #DD4B39;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.card-body-social .facebook {
+  color: #49649F;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.card-body-social .linkedin {
+  color: #007BB6;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .block-update-card { display: none; }  /* show it on small screens */
+}
+
+/*blog stuff */
+.blog-short{
+  border-bottom:1px solid #ddd;
+  padding-bottom:30px;
+  display: table;
+
+}
+
+.label-tag{
+  background-color: #002e62;
+}
+
+.label-tag a{
+  text-decoration: none;
+  color: white;
+}
+
+.margin10{margin-bottom:10px; margin-right:10px;}
+
+.margin-top20{margin-top:20px}
+
+.padding10{padding: 10px;}

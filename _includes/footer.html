@@ -1,47 +1,5 @@
-        </div>
-        <div class="col-md-3 col-sm-4">
-            <div>
-                <!--Wanna Call Someone :P -->
-                <div class="media block-update-card">
-                    <a class="pull-left" href="#">
-                        <img class="media-object update-card-MDimentions"
-                             src="{{ "/img/avatar_icon.jpg" | prepend: site.baseurl }}"
-                        alt="{{ site.authorName }}">
-                    </a>
-
-                    <div class="media-body update-card-body profile-name">
-                        <h4 class="media-heading">{{ site.authorName }}</h4>
-
-                        <div class="btn-toolbar card-body-social" role="toolbar">
-                            <a href="https://github.com/{{site.github_username}}" class="btn-group fa fa-github-alt git"></a>
-                            <div class="btn-group linkedin fa fa-linkedin-square"></div>
-                        </div>
-                    </div>
-                    <div class="block-update-card pull-left">
-                        <div class="v-status">
-                        </div>
-                        <div class="update-card-body">
-                            <p>Nothing can beat the satisfaction of learning something new.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="margin-top20"></div>
-            <div class="padding10 block-update-card">
-                <h4>Tags</h4>
-                <div >
-                    {% for tag in site.data.tags %}
-                        <a class="label label-tag" href="{{site.baseurl}}/tag/{{tag[0]}}">{{tag[1]}}</a><br/>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <footer class="site-footer">
     <div class="container">
-        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
         <p class="small text-muted pull-right">© 2015 Badal. All rights reserved</p>
     </div>
 </footer>

@@ -1,6 +1,6 @@
 ---
 layout: post-by-tags
-title: 'Articles by tag: java'
+title: 'Articles by Tag: Java'
 tag: java
 permalink: /tag/java/
 ---

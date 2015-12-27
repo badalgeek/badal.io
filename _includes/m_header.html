@@ -1,0 +1,60 @@
+<header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</span>
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+                <input class="mdl-textfield__input" type="text" id="search">
+                <label class="mdl-textfield__label" for="search">Enter your query...</label>
+            </div>
+        </div>
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+            <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+            <li class="mdl-menu__item">About</li>
+            <li class="mdl-menu__item">Contact</li>
+        </ul>
+    </div>
+</header>
+<div class="mdl-layout__drawer">
+    <div class="profile-card mdl-card mdl-shadow--3dp">
+        <div class="mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell mdl-cell--4-col">
+                <a href="{{site.url}}"><img src="{{ "/img/avatar_icon.jpg" | prepend: site.baseurl }}" width="100px" height="100px"></a>
+            </div>
+            <div class="mdl-cell mdl-cell--8-col">
+                <h2 class="mdl-card__title-text"><a href="{{site.url}}">Badal IO Socket</a></h2>
+                <div class="mdl-card__supporting-text">
+                    Nothing can beat the satisfaction of learning something new.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-card mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__actions">
+            <a class="mdl-button" href="https://github.com/{{site.github_username}}"><i class="fa fa-github-alt"></i></a>
+            <a class="mdl-button" href="https://www.linkedin.com/in/thisisbadal"><i class="fa fa-linkedin-square"></i></a>
+            <a class="mdl-button" href="{{ '/feed.xml' | prepend: site.baseurl }}"><i class="fa fa-rss-square"></i></a>
+        </div>
+    </div>
+
+    <div class="sidebar-separator"></div>
+
+    <div class="tags mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Tags</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            {% for tag in site.data.tags %}
+                <a href="{{site.baseurl}}/tag/{{tag[0]}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    {{tag[1]}}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>

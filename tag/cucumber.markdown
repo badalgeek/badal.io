@@ -1,6 +1,6 @@
 ---
 layout: post-by-tags
-title: 'Articles by tag: Cucumber'
+title: 'Articles by Tag: Cucumber'
 tag: cucumber
 permalink: /tag/cucumber/
 ---

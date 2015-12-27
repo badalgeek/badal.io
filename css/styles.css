@@ -1,0 +1,97 @@
+p {
+    text-align: justify;
+}
+
+.mdl-layout__drawer {
+    width:301px;
+    transform: translateX(-301px);
+    background: #ffffff;
+}
+
+.mdl-layout--fixed-drawer.is-upgraded:not(.is-small-screen)>.mdl-layout__header{
+    margin-left:301px;width:calc(100% - 301px)
+}
+
+@media screen and (min-width:1024px) {
+    .mdl-layout--fixed-drawer > .mdl-layout__content {
+        margin-left: 310px
+    }
+}
+
+.mdl-layout__drawer .mdl-card {
+    width: 300px;
+    min-height:0px;
+}
+.profile-card .mdl-grid {
+    margin: 0px;
+}
+
+.profile-card a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.profile-card .mdl-card__title-text {
+    padding: 10px 0 0 10px;
+    font-weight: 500;
+}
+
+.profile-card .mdl-grid .mdl-card__supporting-text {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.profile-card .mdl-button {
+    padding:0px;
+    min-width: 40px;
+    color: #448AFF;
+}
+
+.profile-card .mdl-button i {
+    font-size: 30px;
+}
+
+.sidebar-separator {
+    height: 32px;
+}
+
+.tags .mdl-card__title, .tags .mdl-card__supporting-text {
+    padding: 10px;
+}
+
+.tags .mdl-button {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.post-card {
+    width:100%;
+    margin-bottom: 20px;
+}
+
+.post-card .mdl-card__title {
+    background: #8BC34A;
+}
+
+.post-card .mdl-card__supporting-text {
+    width: auto;
+}
+
+.post-card a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 300;
+}
+
+.post-card p {
+    margin-bottom: 0px;
+}
+
+.post-card .mdl-button {
+    padding: 0px 5px;
+    min-width: 0px;
+}
+
+.content {
+    margin: 10px 10px 10px 10px;
+}

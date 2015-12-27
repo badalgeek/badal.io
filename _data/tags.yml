@@ -1,3 +1,3 @@
 java: Java
-cucumber: Cucumber BDD Test
-bdd: Behavior Driven Development
+cucumber: Cucumber
+parallelCucumber: Parallel Cucumber

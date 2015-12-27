@@ -1,6 +1,6 @@
 ---
 layout: post-by-tags
-title: 'Articles by tag: BDD'
+title: 'Articles by Tag: BDD'
 tag: bdd
 permalink: /tag/bdd/
 ---

@@ -1,40 +1,44 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h3 class="post-title" itemprop="name headline">{{ page.title }}</h3>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-    <div class="margin10">
-      <small>
-        <i class="fa fa-tag"></i>
-        {% for tag in page.tags %}
-          <span class="label label-tag"><a href="{{site.baseurl}}/tag/{{tag}}">{{site.data.tags[tag]}}</a></span>
-        {% endfor %}
-      </small>
-    </div>
-  </header>
+<small>
+  <i class="fa fa-calendar"></i>
+  <time>
+    {{ page.date | date:'%A, %B %d, %Y'}}
+  </time>
+</small>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+<div class="markdown-body">
+  {{ content }}
+</div>
 
-  <div id="disqus_thread"></div>
-  <script>
-     var disqus_config = function () {
-     this.page.url = '{{site.url}}{{ page.url }}' ; // Replace PAGE_URL with your page's canonical URL variable
-     this.page.identifier = {{page.identifier}}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-     };
-    (function() {  // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
+<div>
+  <i class="fa fa-tag"></i>
+  {% for tag in page.tags %}
+  <a href="{{site.baseurl}}/tag/{{tag}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--accent">
+    {{site.data.tags[tag]}}
+  </a>
+  {% endfor %}
+</div>
 
-      s.src = '//badalgeek.disqus.com/embed.js';
+<div class="post-card mdl-card mdl-shadow--3dp" style="margin-top: 20px">
+  <div class="mdl-card__supporting-text"><div id="disqus_thread"></div></div>
+</div>
 
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
-</article>
+<script>
+   var disqus_config = function () {
+   this.page.url = '{{site.url}}{{ page.url }}' ; // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = {{page.identifier}}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+   };
+  (function() {  // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '//badalgeek.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
